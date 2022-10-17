@@ -59,7 +59,7 @@ class LoginApi(APIView):
             },status=status.HTTP_400_BAD_REQUEST)
 
 class ListCategory(generics.ListCreateAPIView):
-    permission_classes = [TokenAuthentication]
+    authentication_classes = [TokenAuthentication]
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     #permission_classes=[IsAuthenticated]
