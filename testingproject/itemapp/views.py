@@ -17,6 +17,11 @@ from django.core.paginator import Paginator
 # #     page_query_param = "page"
 # #     page_size_query_param = "page_size"
 
+from django.http import HttpResponse
+def helloview(request):
+    return HttpResponse('<h1>Hello World</h1>') 
+
+
 class RegisterApi(APIView):
     def post(self,request):
         data = request.data

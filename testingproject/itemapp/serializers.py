@@ -1,3 +1,4 @@
+from dataclasses import fields
 from rest_framework import serializers
 from .models import Category,Product,Cart
 from django.contrib.auth.models import User
@@ -32,14 +33,16 @@ class LoginSerializer(serializers.Serializer):
 class CategorySerializer(serializers.ModelSerializer):
     
     class Meta:
-        fields = (
-            'id',
-            'title'
-        )
+        # fields = (
+        #     'id',
+        #     'title'
+        # )
+
         model = Category 
+        fields = '__all__'
 
 class ProductSerializer(serializers.ModelSerializer):
-    createdby=serializers.ReadOnlyField(source='createdby.username',read_only=False)
+    #createdby=serializers.ReadOnlyField(source='createdby.username',read_only=False)
     
     class Meta:
         model = Product

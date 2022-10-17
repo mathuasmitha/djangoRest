@@ -1,5 +1,5 @@
 from django.urls import path,include
-from itemapp.views import RegisterApi,LoginApi,ListCategory,DetailCategory,ProductList,ProductDetail,ListUser,DetailUser,ListCart,DetailCart
+from itemapp.views import RegisterApi,LoginApi,ListCategory,DetailCategory,ProductList,ProductDetail,ListUser,DetailUser,ListCart,DetailCart,helloview
 # ,ProductViewset
 # from rest_framework.routers import DefaultRouter
 
@@ -7,7 +7,9 @@ from itemapp.views import RegisterApi,LoginApi,ListCategory,DetailCategory,Produ
 # router.register(r'product',ProductViewset,basename='Product')
 # urlpatterns = router.urls
 
+
 urlpatterns = [
+    path('hello/', helloview,name='Hello'),
     path('register/',RegisterApi.as_view(),name='Register'),
     path('login/',LoginApi.as_view(),name='Login'),
     path('categorylist/',ListCategory.as_view(),name='CategoryList'),
