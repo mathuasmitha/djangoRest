@@ -5,3 +5,4 @@ pillow
 django-cors-headers
 pyyaml
 django-rest-swagger
+django-cors-headers
