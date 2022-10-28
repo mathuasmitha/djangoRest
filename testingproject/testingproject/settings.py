@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'mydb',
         'USER': 'myuser',
         'PASSWORD': 'mypass',
-        'HOST': 'localhost',
+        'HOST': 'ec2-18-222-127-116.us-east-2.compute.amazonaws.com',
         'PORT': '5432',
     }
 }

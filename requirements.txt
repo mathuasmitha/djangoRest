@@ -1,6 +1,7 @@
 django>=4.0.0,<4.1.0
 djangorestframework
 psycopg2
+psycopg2-binary
 pillow
 django-cors-headers
 pyyaml
