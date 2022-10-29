@@ -23,11 +23,12 @@ COPY . .
 # specified network ports at runtime i.e 8000.
 EXPOSE 8000
 # running server
-CMD ["python", "/usr/src/testing/testingproject/manage.py", "runserver"]
+CMD ["python", "/usr/src/testing/testingproject/manage.py", "runserver","0.0.0.0:8000"]
 
 
 #toexecute
 #docker build -t testingproject_postgress_nginx . --this is without combining 2 or more services/wanna use without docker-compose
+#docker run -d -p 8000:8000 testingproject_postgress_nginx
 #Build the new image and spin up the two containers:
 #$ docker-compose up -d --build
 #$ docker-compose exec web python manage.py migrate --noinput
